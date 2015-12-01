@@ -1684,7 +1684,7 @@ class MyClass(GeneratedClass):
                             <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="The camera change is done." id="4" />
                             <Resource name="Camera setting" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="Delay (5)" id="20" localization="8" tooltip="Wait a moment before triggering the output. &#x0A;Can be stopped anytime. &#x0A;Multiple inputs will trigger multiple outputs." x="775" y="369">
+                        <Box name="Delay (5)" id="20" localization="8" tooltip="Wait a moment before triggering the output. &#x0A;Can be stopped anytime. &#x0A;Multiple inputs will trigger multiple outputs." x="647" y="459">
                             <bitmap>media/images/box/wait.png</bitmap>
                             <script language="4">
                                 <content>
@@ -2110,7 +2110,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>5</language>
+                                                    <language>6</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2319,7 +2319,7 @@ class MyClass(GeneratedClass):
                                                     <chinese>
                                                         <![CDATA[]]>
 </chinese>
-                                                    <language>6</language>
+                                                    <language>7</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -2371,7 +2371,7 @@ class MyClass(GeneratedClass):
                                 <Choice value="Enable" />
                             </Parameter>
                         </Box>
-                        <Box name="LandMarks Tracker" id="24" localization="-1" tooltip="This box makes the robot track a two landmarks pattern. &#x0A;&#x0A;Use firstLandMarkId and secondLandMarkId input to set the land marks to track.&#x0A;&#x0A;Set land marks coordinates in box script with ALTracker.setTargetCoordinates function.&#x0A;&#x0A;Use parameters to set the desired robot position." x="614" y="686">
+                        <Box name="LandMarks Tracker" id="24" localization="-1" tooltip="This box makes the robot track a two landmarks pattern. &#x0A;&#x0A;Use firstLandMarkId and secondLandMarkId input to set the land marks to track.&#x0A;&#x0A;Set land marks coordinates in box script with ALTracker.setTargetCoordinates function.&#x0A;&#x0A;Use parameters to set the desired robot position." x="1371" y="376">
                             <bitmap>media/images/box/tracker/tracker.png</bitmap>
                             <script language="4">
                                 <content>
@@ -2558,13 +2558,33 @@ class MyClass(GeneratedClass):
                                 <Choice value="LArm" />
                                 <Choice value="RArm" />
                             </Parameter>
-                            <Parameter name="Size (m)" inherits_from_parent="0" content_type="2" value="0.06" default_value="0.06" min="0.01" max="0.5" tooltip="LandMark size in meters" id="11" />
+                            <Parameter name="Size (m)" inherits_from_parent="0" content_type="2" value="0.09" default_value="0.06" min="0.01" max="0.5" tooltip="LandMark size in meters" id="11" />
                             <Parameter name="Coordinate X (m)" inherits_from_parent="0" content_type="2" value="-0.2" default_value="-0.2" min="-5" max="5" tooltip="X coordinate of the vector robot-target the robot will try to maintain in move modes." id="12" />
                             <Parameter name="Coordinate Y (m)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-5" max="5" tooltip="Y coordinate of the vector robot-target the robot will try to maintain in move modes." id="13" />
                             <Parameter name="Theta (rad)" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="-3.14" max="3.14" tooltip="Wz coordinate of the vector robot-target the robot will try to maintain in move modes." id="14" />
-                            <Parameter name="Threshold X (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold of the X coordinate of the vector robot-target above which the robot will move to track its target in move modes." id="15" />
-                            <Parameter name="Threshold Y (m)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="1" tooltip="Threshold of the Y coordinate of the vector robot-target above which the robot will move to track its target in move modes." id="16" />
-                            <Parameter name="Threshold Theta (rad)" inherits_from_parent="0" content_type="2" value="0.1" default_value="0.1" min="0.01" max="3.14" tooltip="Threshold of the angle of the vector robot-target above which the robot will move to track its target in move modes." id="17" />
+                            <Parameter name="Threshold X (m)" inherits_from_parent="0" content_type="2" value="1" default_value="0.1" min="0.01" max="1" tooltip="Threshold of the X coordinate of the vector robot-target above which the robot will move to track its target in move modes." id="15" />
+                            <Parameter name="Threshold Y (m)" inherits_from_parent="0" content_type="2" value="1" default_value="0.1" min="0.01" max="1" tooltip="Threshold of the Y coordinate of the vector robot-target above which the robot will move to track its target in move modes." id="16" />
+                            <Parameter name="Threshold Theta (rad)" inherits_from_parent="0" content_type="2" value="3.14" default_value="0.1" min="0.01" max="3.14" tooltip="Threshold of the angle of the vector robot-target above which the robot will move to track its target in move modes." id="17" />
+                        </Box>
+                        <Box name="Number Edit" id="34" localization="8" tooltip="Send the number you entered when the input is stimulated." plugin="numberedit_plugin" x="1195" y="439">
+                            <bitmap>media/images/box/interaction/vocabulary.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[# /!\ Generated content. Do not edit!
+class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self):
+		self.onStopped(68)]]>
+</content>
+                            </script>
+                            <pluginContent>
+                                <number>68</number>
+                            </pluginContent>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="To send the number on the output." id="2" />
+                            <Output name="onStopped" type="2" type_size="1" nature="2" inner="0" tooltip="The number you entered." id="3" />
                         </Box>
                         <Link inputowner="1" indexofinput="2" outputowner="5" indexofoutput="3" />
                         <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="3" />
@@ -2605,7 +2625,6 @@ class MyClass(GeneratedClass):
                         <Link inputowner="11" indexofinput="2" outputowner="23" indexofoutput="4" />
                         <Link inputowner="25" indexofinput="2" outputowner="19" indexofoutput="4" />
                         <Link inputowner="12" indexofinput="2" outputowner="23" indexofoutput="4" />
-                        <Link inputowner="33" indexofinput="2" outputowner="20" indexofoutput="4" />
                         <Link inputowner="12" indexofinput="2" outputowner="32" indexofoutput="8" />
                         <Link inputowner="35" indexofinput="2" outputowner="12" indexofoutput="4" />
                         <Link inputowner="10" indexofinput="2" outputowner="35" indexofoutput="3" />
@@ -2613,6 +2632,10 @@ class MyClass(GeneratedClass):
                         <Link inputowner="19" indexofinput="2" outputowner="26" indexofoutput="3" />
                         <Link inputowner="27" indexofinput="2" outputowner="33" indexofoutput="4" />
                         <Link inputowner="23" indexofinput="2" outputowner="32" indexofoutput="8" />
+                        <Link inputowner="24" indexofinput="2" outputowner="33" indexofoutput="4" />
+                        <Link inputowner="24" indexofinput="4" outputowner="34" indexofoutput="3" />
+                        <Link inputowner="24" indexofinput="3" outputowner="23" indexofoutput="4" />
+                        <Link inputowner="24" indexofinput="3" outputowner="32" indexofoutput="9" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
