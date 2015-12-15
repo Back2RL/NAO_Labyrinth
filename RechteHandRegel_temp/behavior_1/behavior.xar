@@ -285,6 +285,8 @@ class MyClass(GeneratedClass):
         self.latLeft(leftLat)
         left = memoryProxy.getData("Device/SubDeviceList/US/Left/Sensor/Value")
         right = memoryProxy.getData("Device/SubDeviceList/US/Right/Sensor/Value")
+        self.Left(left) #activate the output of the box
+        self.Right(right)
         if( float(left) > 0.50 and float(right) > 0.5):
             self.FoundGap()
         else:
